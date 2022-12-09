@@ -98,6 +98,43 @@ FROM
 WHERE					/* IS (NOT) NULL : null값이 맞거나 아닌거 */
 	`name` IS NOT NULL;
 
+/**********************************************************************/
+/* UPDATE */
+UPDATE
+	student_mst
+SET					/* 바꿀 값 */
+	score = 80
+WHERE					/* 찾을 값 (없을 시 전체가 다 바뀜) */
+	`name` = '박준현';
+
+/* 2학년 중에 성적이 80 ~ 90 사이인 학생들의 점수를 100으로 바꿔라 */
+
+SELECT
+	`name`,
+	student_year,
+	score
+FROM
+	student_mst
+WHERE
+	student_year = 2
+	AND score BETWEEN 80 AND 90;
+	
+UPDATE
+	student_mst
+SET
+	score = 100
+WHERE
+	student_year = 2
+	AND score BETWEEN 80 AND 90;
+/* 못되돌리니까 백업하기 (테이블만 따로 쿼리문으로 백업 가능) */
+	
+/**********************************************************************/
+
+DELETE
+FROM
+	student_mst
+WHERE
+	score < 80;
 
 
 
