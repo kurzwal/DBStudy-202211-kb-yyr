@@ -136,6 +136,6 @@ FROM
 WHERE
 	score < 80;
 
-
+SHOW PROFILES;
 
 
