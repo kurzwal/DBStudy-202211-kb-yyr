@@ -10,7 +10,8 @@ UPDATE (수정) - Update
 DELETE (삭제) - Delete
 
  */
-/* Ctrl + Shift + F9 : 그 구문만 실행 */
+/* Heidi 				: Ctrl + Shift + F9 : 그 구문만 실행 */
+/* Workbench 	: Ctrl + Shift + Enter : 그 구문만 실행 */
 INSERT INTO product_mst
 /* (id, product_name, product_price)   : 모든 데이터가 순서에 맞게 전부 있으면 생략가능 */
 VALUES
